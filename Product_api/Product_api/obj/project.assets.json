@@ -102,6 +102,117 @@
           "buildMultiTargeting/Microsoft.Extensions.ApiDescription.Server.targets": {}
         }
       },
+      "Microsoft.Extensions.DependencyInjection/8.0.0-rc.2.23479.6": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "8.0.0-rc.2.23479.6"
+        },
+        "compile": {
+          "lib/net7.0/Microsoft.Extensions.DependencyInjection.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0/Microsoft.Extensions.DependencyInjection.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net6.0/_._": {}
+        }
+      },
+      "Microsoft.Extensions.DependencyInjection.Abstractions/8.0.0-rc.2.23479.6": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net6.0/_._": {}
+        }
+      },
+      "Microsoft.Extensions.Logging/8.0.0-rc.2.23479.6": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection": "8.0.0-rc.2.23479.6",
+          "Microsoft.Extensions.Logging.Abstractions": "8.0.0-rc.2.23479.6",
+          "Microsoft.Extensions.Options": "8.0.0-rc.2.23479.6"
+        },
+        "compile": {
+          "lib/net7.0/Microsoft.Extensions.Logging.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0/Microsoft.Extensions.Logging.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net6.0/_._": {}
+        }
+      },
+      "Microsoft.Extensions.Logging.Abstractions/8.0.0-rc.2.23479.6": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "8.0.0-rc.2.23479.6"
+        },
+        "compile": {
+          "lib/net7.0/Microsoft.Extensions.Logging.Abstractions.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0/Microsoft.Extensions.Logging.Abstractions.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net6.0/Microsoft.Extensions.Logging.Abstractions.targets": {}
+        }
+      },
+      "Microsoft.Extensions.Options/8.0.0-rc.2.23479.6": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "8.0.0-rc.2.23479.6",
+          "Microsoft.Extensions.Primitives": "8.0.0-rc.2.23479.6"
+        },
+        "compile": {
+          "lib/net7.0/Microsoft.Extensions.Options.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0/Microsoft.Extensions.Options.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net6.0/Microsoft.Extensions.Options.targets": {}
+        }
+      },
+      "Microsoft.Extensions.Primitives/8.0.0-rc.2.23479.6": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0/Microsoft.Extensions.Primitives.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0/Microsoft.Extensions.Primitives.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net6.0/_._": {}
+        }
+      },
       "Microsoft.NETCore.Platforms/3.1.0": {
         "type": "package",
         "compile": {
@@ -215,6 +326,68 @@
         "runtime": {
           "lib/netstandard2.0/BouncyCastle.Crypto.dll": {
             "related": ".xml"
+          }
+        }
+      },
+      "Serilog/3.1.0-dev-02078": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0/Serilog.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0/Serilog.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Serilog.Extensions.Logging/7.0.1-dev-10354": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Logging": "7.0.0",
+          "Serilog": "3.1.0-dev-02077"
+        },
+        "compile": {
+          "lib/net7.0/Serilog.Extensions.Logging.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0/Serilog.Extensions.Logging.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Serilog.Formatting.Compact/2.0.0-dev-00961": {
+        "type": "package",
+        "dependencies": {
+          "Serilog": "3.1.0-dev-02071"
+        },
+        "compile": {
+          "lib/net7.0/Serilog.Formatting.Compact.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0/Serilog.Formatting.Compact.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Serilog.Sinks.File/5.0.1-dev-00968": {
+        "type": "package",
+        "dependencies": {
+          "Serilog": "2.10.0"
+        },
+        "compile": {
+          "lib/net6.0/Serilog.Sinks.File.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Serilog.Sinks.File.dll": {
+            "related": ".pdb;.xml"
           }
         }
       },
@@ -1009,6 +1182,252 @@
         "tools/netcoreapp2.1/System.Diagnostics.DiagnosticSource.dll"
       ]
     },
+    "Microsoft.Extensions.DependencyInjection/8.0.0-rc.2.23479.6": {
+      "sha512": "pUD/Gjd0MTrWPD4/SnKazYQvky2EHEtPyGb3FWZkEPWAfYPFVVw5fMRTkfoBPivpWLuxEw4FNK7GX77xEErUQQ==",
+      "type": "package",
+      "path": "microsoft.extensions.dependencyinjection/8.0.0-rc.2.23479.6",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "LICENSE.TXT",
+        "PACKAGE.md",
+        "THIRD-PARTY-NOTICES.TXT",
+        "buildTransitive/net461/Microsoft.Extensions.DependencyInjection.targets",
+        "buildTransitive/net462/_._",
+        "buildTransitive/net6.0/_._",
+        "buildTransitive/netcoreapp2.0/Microsoft.Extensions.DependencyInjection.targets",
+        "lib/net462/Microsoft.Extensions.DependencyInjection.dll",
+        "lib/net462/Microsoft.Extensions.DependencyInjection.xml",
+        "lib/net6.0/Microsoft.Extensions.DependencyInjection.dll",
+        "lib/net6.0/Microsoft.Extensions.DependencyInjection.xml",
+        "lib/net7.0/Microsoft.Extensions.DependencyInjection.dll",
+        "lib/net7.0/Microsoft.Extensions.DependencyInjection.xml",
+        "lib/net8.0/Microsoft.Extensions.DependencyInjection.dll",
+        "lib/net8.0/Microsoft.Extensions.DependencyInjection.xml",
+        "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.dll",
+        "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.xml",
+        "lib/netstandard2.1/Microsoft.Extensions.DependencyInjection.dll",
+        "lib/netstandard2.1/Microsoft.Extensions.DependencyInjection.xml",
+        "microsoft.extensions.dependencyinjection.8.0.0-rc.2.23479.6.nupkg.sha512",
+        "microsoft.extensions.dependencyinjection.nuspec",
+        "useSharedDesignerContext.txt"
+      ]
+    },
+    "Microsoft.Extensions.DependencyInjection.Abstractions/8.0.0-rc.2.23479.6": {
+      "sha512": "QLTBDvE/E05Xl2UVFXOBFIW0VLn/mMJ8DSbTyK6ODsO3sqDs0fyPqydACTnX/nbGZRrTMeud3XDbUrt24ab1EA==",
+      "type": "package",
+      "path": "microsoft.extensions.dependencyinjection.abstractions/8.0.0-rc.2.23479.6",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "LICENSE.TXT",
+        "PACKAGE.md",
+        "THIRD-PARTY-NOTICES.TXT",
+        "buildTransitive/net461/Microsoft.Extensions.DependencyInjection.Abstractions.targets",
+        "buildTransitive/net462/_._",
+        "buildTransitive/net6.0/_._",
+        "buildTransitive/netcoreapp2.0/Microsoft.Extensions.DependencyInjection.Abstractions.targets",
+        "lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.dll",
+        "lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml",
+        "lib/net6.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll",
+        "lib/net6.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml",
+        "lib/net7.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll",
+        "lib/net7.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml",
+        "lib/net8.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll",
+        "lib/net8.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml",
+        "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll",
+        "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml",
+        "lib/netstandard2.1/Microsoft.Extensions.DependencyInjection.Abstractions.dll",
+        "lib/netstandard2.1/Microsoft.Extensions.DependencyInjection.Abstractions.xml",
+        "microsoft.extensions.dependencyinjection.abstractions.8.0.0-rc.2.23479.6.nupkg.sha512",
+        "microsoft.extensions.dependencyinjection.abstractions.nuspec",
+        "useSharedDesignerContext.txt"
+      ]
+    },
+    "Microsoft.Extensions.Logging/8.0.0-rc.2.23479.6": {
+      "sha512": "EqCB9QQYUHUVklT1Us38PuiHNIAbYHVnAvPEpR8VSBbiCa1GUIOdW+zLR8Cvb9XtjDkirVA+eH84z0ktikPw5Q==",
+      "type": "package",
+      "path": "microsoft.extensions.logging/8.0.0-rc.2.23479.6",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "LICENSE.TXT",
+        "PACKAGE.md",
+        "THIRD-PARTY-NOTICES.TXT",
+        "buildTransitive/net461/Microsoft.Extensions.Logging.targets",
+        "buildTransitive/net462/_._",
+        "buildTransitive/net6.0/_._",
+        "buildTransitive/netcoreapp2.0/Microsoft.Extensions.Logging.targets",
+        "lib/net462/Microsoft.Extensions.Logging.dll",
+        "lib/net462/Microsoft.Extensions.Logging.xml",
+        "lib/net6.0/Microsoft.Extensions.Logging.dll",
+        "lib/net6.0/Microsoft.Extensions.Logging.xml",
+        "lib/net7.0/Microsoft.Extensions.Logging.dll",
+        "lib/net7.0/Microsoft.Extensions.Logging.xml",
+        "lib/net8.0/Microsoft.Extensions.Logging.dll",
+        "lib/net8.0/Microsoft.Extensions.Logging.xml",
+        "lib/netstandard2.0/Microsoft.Extensions.Logging.dll",
+        "lib/netstandard2.0/Microsoft.Extensions.Logging.xml",
+        "lib/netstandard2.1/Microsoft.Extensions.Logging.dll",
+        "lib/netstandard2.1/Microsoft.Extensions.Logging.xml",
+        "microsoft.extensions.logging.8.0.0-rc.2.23479.6.nupkg.sha512",
+        "microsoft.extensions.logging.nuspec",
+        "useSharedDesignerContext.txt"
+      ]
+    },
+    "Microsoft.Extensions.Logging.Abstractions/8.0.0-rc.2.23479.6": {
+      "sha512": "xuQcOpvz76nTYytCf9HrHGCbMq/PU/ZGSkhX/grDBfWHZ1gjz38hDjrYn4NMr5DnndNtou4yn6tR5q0hjCr9pw==",
+      "type": "package",
+      "path": "microsoft.extensions.logging.abstractions/8.0.0-rc.2.23479.6",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "LICENSE.TXT",
+        "PACKAGE.md",
+        "THIRD-PARTY-NOTICES.TXT",
+        "analyzers/dotnet/roslyn3.11/cs/Microsoft.Extensions.Logging.Generators.dll",
+        "analyzers/dotnet/roslyn3.11/cs/cs/Microsoft.Extensions.Logging.Generators.resources.dll",
+        "analyzers/dotnet/roslyn3.11/cs/de/Microsoft.Extensions.Logging.Generators.resources.dll",
+        "analyzers/dotnet/roslyn3.11/cs/es/Microsoft.Extensions.Logging.Generators.resources.dll",
+        "analyzers/dotnet/roslyn3.11/cs/fr/Microsoft.Extensions.Logging.Generators.resources.dll",
+        "analyzers/dotnet/roslyn3.11/cs/it/Microsoft.Extensions.Logging.Generators.resources.dll",
+        "analyzers/dotnet/roslyn3.11/cs/ja/Microsoft.Extensions.Logging.Generators.resources.dll",
+        "analyzers/dotnet/roslyn3.11/cs/ko/Microsoft.Extensions.Logging.Generators.resources.dll",
+        "analyzers/dotnet/roslyn3.11/cs/pl/Microsoft.Extensions.Logging.Generators.resources.dll",
+        "analyzers/dotnet/roslyn3.11/cs/pt-BR/Microsoft.Extensions.Logging.Generators.resources.dll",
+        "analyzers/dotnet/roslyn3.11/cs/ru/Microsoft.Extensions.Logging.Generators.resources.dll",
+        "analyzers/dotnet/roslyn3.11/cs/tr/Microsoft.Extensions.Logging.Generators.resources.dll",
+        "analyzers/dotnet/roslyn3.11/cs/zh-Hans/Microsoft.Extensions.Logging.Generators.resources.dll",
+        "analyzers/dotnet/roslyn3.11/cs/zh-Hant/Microsoft.Extensions.Logging.Generators.resources.dll",
+        "analyzers/dotnet/roslyn4.0/cs/Microsoft.Extensions.Logging.Generators.dll",
+        "analyzers/dotnet/roslyn4.0/cs/cs/Microsoft.Extensions.Logging.Generators.resources.dll",
+        "analyzers/dotnet/roslyn4.0/cs/de/Microsoft.Extensions.Logging.Generators.resources.dll",
+        "analyzers/dotnet/roslyn4.0/cs/es/Microsoft.Extensions.Logging.Generators.resources.dll",
+        "analyzers/dotnet/roslyn4.0/cs/fr/Microsoft.Extensions.Logging.Generators.resources.dll",
+        "analyzers/dotnet/roslyn4.0/cs/it/Microsoft.Extensions.Logging.Generators.resources.dll",
+        "analyzers/dotnet/roslyn4.0/cs/ja/Microsoft.Extensions.Logging.Generators.resources.dll",
+        "analyzers/dotnet/roslyn4.0/cs/ko/Microsoft.Extensions.Logging.Generators.resources.dll",
+        "analyzers/dotnet/roslyn4.0/cs/pl/Microsoft.Extensions.Logging.Generators.resources.dll",
+        "analyzers/dotnet/roslyn4.0/cs/pt-BR/Microsoft.Extensions.Logging.Generators.resources.dll",
+        "analyzers/dotnet/roslyn4.0/cs/ru/Microsoft.Extensions.Logging.Generators.resources.dll",
+        "analyzers/dotnet/roslyn4.0/cs/tr/Microsoft.Extensions.Logging.Generators.resources.dll",
+        "analyzers/dotnet/roslyn4.0/cs/zh-Hans/Microsoft.Extensions.Logging.Generators.resources.dll",
+        "analyzers/dotnet/roslyn4.0/cs/zh-Hant/Microsoft.Extensions.Logging.Generators.resources.dll",
+        "analyzers/dotnet/roslyn4.4/cs/Microsoft.Extensions.Logging.Generators.dll",
+        "analyzers/dotnet/roslyn4.4/cs/cs/Microsoft.Extensions.Logging.Generators.resources.dll",
+        "analyzers/dotnet/roslyn4.4/cs/de/Microsoft.Extensions.Logging.Generators.resources.dll",
+        "analyzers/dotnet/roslyn4.4/cs/es/Microsoft.Extensions.Logging.Generators.resources.dll",
+        "analyzers/dotnet/roslyn4.4/cs/fr/Microsoft.Extensions.Logging.Generators.resources.dll",
+        "analyzers/dotnet/roslyn4.4/cs/it/Microsoft.Extensions.Logging.Generators.resources.dll",
+        "analyzers/dotnet/roslyn4.4/cs/ja/Microsoft.Extensions.Logging.Generators.resources.dll",
+        "analyzers/dotnet/roslyn4.4/cs/ko/Microsoft.Extensions.Logging.Generators.resources.dll",
+        "analyzers/dotnet/roslyn4.4/cs/pl/Microsoft.Extensions.Logging.Generators.resources.dll",
+        "analyzers/dotnet/roslyn4.4/cs/pt-BR/Microsoft.Extensions.Logging.Generators.resources.dll",
+        "analyzers/dotnet/roslyn4.4/cs/ru/Microsoft.Extensions.Logging.Generators.resources.dll",
+        "analyzers/dotnet/roslyn4.4/cs/tr/Microsoft.Extensions.Logging.Generators.resources.dll",
+        "analyzers/dotnet/roslyn4.4/cs/zh-Hans/Microsoft.Extensions.Logging.Generators.resources.dll",
+        "analyzers/dotnet/roslyn4.4/cs/zh-Hant/Microsoft.Extensions.Logging.Generators.resources.dll",
+        "buildTransitive/net461/Microsoft.Extensions.Logging.Abstractions.targets",
+        "buildTransitive/net462/Microsoft.Extensions.Logging.Abstractions.targets",
+        "buildTransitive/net6.0/Microsoft.Extensions.Logging.Abstractions.targets",
+        "buildTransitive/netcoreapp2.0/Microsoft.Extensions.Logging.Abstractions.targets",
+        "buildTransitive/netstandard2.0/Microsoft.Extensions.Logging.Abstractions.targets",
+        "lib/net462/Microsoft.Extensions.Logging.Abstractions.dll",
+        "lib/net462/Microsoft.Extensions.Logging.Abstractions.xml",
+        "lib/net6.0/Microsoft.Extensions.Logging.Abstractions.dll",
+        "lib/net6.0/Microsoft.Extensions.Logging.Abstractions.xml",
+        "lib/net7.0/Microsoft.Extensions.Logging.Abstractions.dll",
+        "lib/net7.0/Microsoft.Extensions.Logging.Abstractions.xml",
+        "lib/net8.0/Microsoft.Extensions.Logging.Abstractions.dll",
+        "lib/net8.0/Microsoft.Extensions.Logging.Abstractions.xml",
+        "lib/netstandard2.0/Microsoft.Extensions.Logging.Abstractions.dll",
+        "lib/netstandard2.0/Microsoft.Extensions.Logging.Abstractions.xml",
+        "microsoft.extensions.logging.abstractions.8.0.0-rc.2.23479.6.nupkg.sha512",
+        "microsoft.extensions.logging.abstractions.nuspec",
+        "useSharedDesignerContext.txt"
+      ]
+    },
+    "Microsoft.Extensions.Options/8.0.0-rc.2.23479.6": {
+      "sha512": "f2uTnKEleplKK+pVKEg1rOCmM3+cuLpafTpKJzbj9lm8dmj0+dWxb0L6MAt9r1s3OYlIKY5IdkW0TUFKXvRCMg==",
+      "type": "package",
+      "path": "microsoft.extensions.options/8.0.0-rc.2.23479.6",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "LICENSE.TXT",
+        "PACKAGE.md",
+        "THIRD-PARTY-NOTICES.TXT",
+        "analyzers/dotnet/roslyn4.4/cs/Microsoft.Extensions.Options.SourceGeneration.dll",
+        "analyzers/dotnet/roslyn4.4/cs/cs/Microsoft.Extensions.Options.SourceGeneration.resources.dll",
+        "analyzers/dotnet/roslyn4.4/cs/de/Microsoft.Extensions.Options.SourceGeneration.resources.dll",
+        "analyzers/dotnet/roslyn4.4/cs/es/Microsoft.Extensions.Options.SourceGeneration.resources.dll",
+        "analyzers/dotnet/roslyn4.4/cs/fr/Microsoft.Extensions.Options.SourceGeneration.resources.dll",
+        "analyzers/dotnet/roslyn4.4/cs/it/Microsoft.Extensions.Options.SourceGeneration.resources.dll",
+        "analyzers/dotnet/roslyn4.4/cs/ja/Microsoft.Extensions.Options.SourceGeneration.resources.dll",
+        "analyzers/dotnet/roslyn4.4/cs/ko/Microsoft.Extensions.Options.SourceGeneration.resources.dll",
+        "analyzers/dotnet/roslyn4.4/cs/pl/Microsoft.Extensions.Options.SourceGeneration.resources.dll",
+        "analyzers/dotnet/roslyn4.4/cs/pt-BR/Microsoft.Extensions.Options.SourceGeneration.resources.dll",
+        "analyzers/dotnet/roslyn4.4/cs/ru/Microsoft.Extensions.Options.SourceGeneration.resources.dll",
+        "analyzers/dotnet/roslyn4.4/cs/tr/Microsoft.Extensions.Options.SourceGeneration.resources.dll",
+        "analyzers/dotnet/roslyn4.4/cs/zh-Hans/Microsoft.Extensions.Options.SourceGeneration.resources.dll",
+        "analyzers/dotnet/roslyn4.4/cs/zh-Hant/Microsoft.Extensions.Options.SourceGeneration.resources.dll",
+        "buildTransitive/net461/Microsoft.Extensions.Options.targets",
+        "buildTransitive/net462/Microsoft.Extensions.Options.targets",
+        "buildTransitive/net6.0/Microsoft.Extensions.Options.targets",
+        "buildTransitive/netcoreapp2.0/Microsoft.Extensions.Options.targets",
+        "buildTransitive/netstandard2.0/Microsoft.Extensions.Options.targets",
+        "lib/net462/Microsoft.Extensions.Options.dll",
+        "lib/net462/Microsoft.Extensions.Options.xml",
+        "lib/net6.0/Microsoft.Extensions.Options.dll",
+        "lib/net6.0/Microsoft.Extensions.Options.xml",
+        "lib/net7.0/Microsoft.Extensions.Options.dll",
+        "lib/net7.0/Microsoft.Extensions.Options.xml",
+        "lib/net8.0/Microsoft.Extensions.Options.dll",
+        "lib/net8.0/Microsoft.Extensions.Options.xml",
+        "lib/netstandard2.0/Microsoft.Extensions.Options.dll",
+        "lib/netstandard2.0/Microsoft.Extensions.Options.xml",
+        "lib/netstandard2.1/Microsoft.Extensions.Options.dll",
+        "lib/netstandard2.1/Microsoft.Extensions.Options.xml",
+        "microsoft.extensions.options.8.0.0-rc.2.23479.6.nupkg.sha512",
+        "microsoft.extensions.options.nuspec",
+        "useSharedDesignerContext.txt"
+      ]
+    },
+    "Microsoft.Extensions.Primitives/8.0.0-rc.2.23479.6": {
+      "sha512": "I3fTiDmV+2cCR3VjH+oz49AMgrAqX1cmNiWXmEAituAI7jCLA16uXzvYQTwxhQzov5BTdPVXKGNTxsMb1GpcLQ==",
+      "type": "package",
+      "path": "microsoft.extensions.primitives/8.0.0-rc.2.23479.6",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "LICENSE.TXT",
+        "PACKAGE.md",
+        "THIRD-PARTY-NOTICES.TXT",
+        "buildTransitive/net461/Microsoft.Extensions.Primitives.targets",
+        "buildTransitive/net462/_._",
+        "buildTransitive/net6.0/_._",
+        "buildTransitive/netcoreapp2.0/Microsoft.Extensions.Primitives.targets",
+        "lib/net462/Microsoft.Extensions.Primitives.dll",
+        "lib/net462/Microsoft.Extensions.Primitives.xml",
+        "lib/net6.0/Microsoft.Extensions.Primitives.dll",
+        "lib/net6.0/Microsoft.Extensions.Primitives.xml",
+        "lib/net7.0/Microsoft.Extensions.Primitives.dll",
+        "lib/net7.0/Microsoft.Extensions.Primitives.xml",
+        "lib/net8.0/Microsoft.Extensions.Primitives.dll",
+        "lib/net8.0/Microsoft.Extensions.Primitives.xml",
+        "lib/netstandard2.0/Microsoft.Extensions.Primitives.dll",
+        "lib/netstandard2.0/Microsoft.Extensions.Primitives.xml",
+        "microsoft.extensions.primitives.8.0.0-rc.2.23479.6.nupkg.sha512",
+        "microsoft.extensions.primitives.nuspec",
+        "useSharedDesignerContext.txt"
+      ]
+    },
     "Microsoft.NETCore.Platforms/3.1.0": {
       "sha512": "z7aeg8oHln2CuNulfhiLYxCVMPEwBl3rzicjvIX+4sUuCwvXw5oXQEtbiU2c0z4qYL5L3Kmx0mMA/+t/SbY67w==",
       "type": "package",
@@ -1126,6 +1545,111 @@
         "lib/netstandard2.0/BouncyCastle.Crypto.xml",
         "portable.bouncycastle.1.9.0.nupkg.sha512",
         "portable.bouncycastle.nuspec"
+      ]
+    },
+    "Serilog/3.1.0-dev-02078": {
+      "sha512": "x4MhGIlvVUgrhhCM+cuj/5UEnNJaKBSEC8xB2FpdEi0BLmwPsKBm3IeXHSdzBrfjv44tzrQQ2FkI3rlrh8lzkg==",
+      "type": "package",
+      "path": "serilog/3.1.0-dev-02078",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "icon.png",
+        "lib/net462/Serilog.dll",
+        "lib/net462/Serilog.xml",
+        "lib/net471/Serilog.dll",
+        "lib/net471/Serilog.xml",
+        "lib/net5.0/Serilog.dll",
+        "lib/net5.0/Serilog.xml",
+        "lib/net6.0/Serilog.dll",
+        "lib/net6.0/Serilog.xml",
+        "lib/net7.0/Serilog.dll",
+        "lib/net7.0/Serilog.xml",
+        "lib/netstandard2.0/Serilog.dll",
+        "lib/netstandard2.0/Serilog.xml",
+        "lib/netstandard2.1/Serilog.dll",
+        "lib/netstandard2.1/Serilog.xml",
+        "serilog.3.1.0-dev-02078.nupkg.sha512",
+        "serilog.nuspec"
+      ]
+    },
+    "Serilog.Extensions.Logging/7.0.1-dev-10354": {
+      "sha512": "G23o1TgBXc0Q8AnWwP9yh933SKo64npN8xBKC0OPhyX9JXbeg7AWDw7FCQc3olwSEkOhcG53mO2Bq3+xk8f9kw==",
+      "type": "package",
+      "path": "serilog.extensions.logging/7.0.1-dev-10354",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "lib/net462/Serilog.Extensions.Logging.dll",
+        "lib/net462/Serilog.Extensions.Logging.xml",
+        "lib/net6.0/Serilog.Extensions.Logging.dll",
+        "lib/net6.0/Serilog.Extensions.Logging.xml",
+        "lib/net7.0/Serilog.Extensions.Logging.dll",
+        "lib/net7.0/Serilog.Extensions.Logging.xml",
+        "lib/netstandard2.0/Serilog.Extensions.Logging.dll",
+        "lib/netstandard2.0/Serilog.Extensions.Logging.xml",
+        "lib/netstandard2.1/Serilog.Extensions.Logging.dll",
+        "lib/netstandard2.1/Serilog.Extensions.Logging.xml",
+        "serilog-extension-nuget.png",
+        "serilog.extensions.logging.7.0.1-dev-10354.nupkg.sha512",
+        "serilog.extensions.logging.nuspec"
+      ]
+    },
+    "Serilog.Formatting.Compact/2.0.0-dev-00961": {
+      "sha512": "rBtipIKqJbt6gTWuu8/S6Es7meCa3KeQIekV37a87VLg14mYaQpm0oRLG/IsGXGZkHvTvnSub/KuKPil9Qbbow==",
+      "type": "package",
+      "path": "serilog.formatting.compact/2.0.0-dev-00961",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "lib/net462/Serilog.Formatting.Compact.dll",
+        "lib/net462/Serilog.Formatting.Compact.xml",
+        "lib/net471/Serilog.Formatting.Compact.dll",
+        "lib/net471/Serilog.Formatting.Compact.xml",
+        "lib/net6.0/Serilog.Formatting.Compact.dll",
+        "lib/net6.0/Serilog.Formatting.Compact.xml",
+        "lib/net7.0/Serilog.Formatting.Compact.dll",
+        "lib/net7.0/Serilog.Formatting.Compact.xml",
+        "lib/netstandard2.0/Serilog.Formatting.Compact.dll",
+        "lib/netstandard2.0/Serilog.Formatting.Compact.xml",
+        "lib/netstandard2.1/Serilog.Formatting.Compact.dll",
+        "lib/netstandard2.1/Serilog.Formatting.Compact.xml",
+        "serilog-extension-nuget.png",
+        "serilog.formatting.compact.2.0.0-dev-00961.nupkg.sha512",
+        "serilog.formatting.compact.nuspec"
+      ]
+    },
+    "Serilog.Sinks.File/5.0.1-dev-00968": {
+      "sha512": "139kP+WeSXgyeQmudHu/vOCj1pWKlOLkHtdEfhisoPAGCNhIe8TAjweMpL9iuF+X40flA84w0Oaa4jhzXiM83w==",
+      "type": "package",
+      "path": "serilog.sinks.file/5.0.1-dev-00968",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "images/icon.png",
+        "lib/net45/Serilog.Sinks.File.dll",
+        "lib/net45/Serilog.Sinks.File.pdb",
+        "lib/net45/Serilog.Sinks.File.xml",
+        "lib/net5.0/Serilog.Sinks.File.dll",
+        "lib/net5.0/Serilog.Sinks.File.pdb",
+        "lib/net5.0/Serilog.Sinks.File.xml",
+        "lib/net6.0/Serilog.Sinks.File.dll",
+        "lib/net6.0/Serilog.Sinks.File.pdb",
+        "lib/net6.0/Serilog.Sinks.File.xml",
+        "lib/netstandard1.3/Serilog.Sinks.File.dll",
+        "lib/netstandard1.3/Serilog.Sinks.File.pdb",
+        "lib/netstandard1.3/Serilog.Sinks.File.xml",
+        "lib/netstandard2.0/Serilog.Sinks.File.dll",
+        "lib/netstandard2.0/Serilog.Sinks.File.pdb",
+        "lib/netstandard2.0/Serilog.Sinks.File.xml",
+        "lib/netstandard2.1/Serilog.Sinks.File.dll",
+        "lib/netstandard2.1/Serilog.Sinks.File.pdb",
+        "lib/netstandard2.1/Serilog.Sinks.File.xml",
+        "serilog.sinks.file.5.0.1-dev-00968.nupkg.sha512",
+        "serilog.sinks.file.nuspec"
       ]
     },
     "Swashbuckle.AspNetCore/6.5.0": {
@@ -2264,7 +2788,12 @@
     "net7.0": [
       "Dapper >= 2.1.11",
       "Microsoft.AspNetCore.OpenApi >= 7.0.11",
+      "Microsoft.Extensions.Logging >= 8.0.0-rc.2.23479.6",
       "MySql.Data >= 8.1.0",
+      "Serilog >= 3.1.0-dev-02078",
+      "Serilog.Extensions.Logging >= 7.0.1-dev-10354",
+      "Serilog.Formatting.Compact >= 2.0.0-dev-00961",
+      "Serilog.Sinks.File >= 5.0.1-dev-00968",
       "Swashbuckle.AspNetCore >= 6.5.0"
     ]
   },
@@ -2316,9 +2845,29 @@
             "target": "Package",
             "version": "[7.0.11, )"
           },
+          "Microsoft.Extensions.Logging": {
+            "target": "Package",
+            "version": "[8.0.0-rc.2.23479.6, )"
+          },
           "MySql.Data": {
             "target": "Package",
             "version": "[8.1.0, )"
+          },
+          "Serilog": {
+            "target": "Package",
+            "version": "[3.1.0-dev-02078, )"
+          },
+          "Serilog.Extensions.Logging": {
+            "target": "Package",
+            "version": "[7.0.1-dev-10354, )"
+          },
+          "Serilog.Formatting.Compact": {
+            "target": "Package",
+            "version": "[2.0.0-dev-00961, )"
+          },
+          "Serilog.Sinks.File": {
+            "target": "Package",
+            "version": "[5.0.1-dev-00968, )"
           },
           "Swashbuckle.AspNetCore": {
             "target": "Package",

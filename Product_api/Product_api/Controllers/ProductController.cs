@@ -1,16 +1,20 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Product_api.Model;
 using Product_api.Repository;
+using Product_api.Logging;
+using System;
 
 [ApiController]
 [Route("api/products")]
 public class ProductController : ControllerBase
 {
     private readonly IProductRepository _productRepository;
+    private readonly Product_api.Logging.ILogger _logger;
 
-    public ProductController(IProductRepository productRepository)
+    public ProductController(IProductRepository productRepository, Product_api.Logging.ILogger statusLogging)
     {
         _productRepository = productRepository;
+        _logger = statusLogging;
     }
 
     // GET: api/products
@@ -20,10 +24,12 @@ public class ProductController : ControllerBase
         try
         {
             var products = await _productRepository.GetAllAsync();
+            _logger.Log("All Available Products are displayed.");
             return Ok(products);
         }
         catch (Exception ex)
         {
+            _logger.Log("Error: " + ex);
             return StatusCode(StatusCodes.Status500InternalServerError, "An error occurred while fetching products.");
         }
     }
@@ -36,11 +42,16 @@ public class ProductController : ControllerBase
         {
             var product = await _productRepository.GetByIdAsync(id);
             if (product == null)
+            {
+                _logger.Log("Error: No Product found!");
                 return NotFound();
+            }
+            _logger.Log($"Product with id:{id} found.");
             return Ok(product);
         }
         catch (Exception ex)
         {
+            _logger.Log("Error: " + ex);
             return StatusCode(StatusCodes.Status500InternalServerError, "An error occurred while fetching the product.");
         }
     }
@@ -52,13 +63,18 @@ public class ProductController : ControllerBase
         try
         {
             if (product == null)
+            {
+                _logger.Log("Error: Invalid product data.");
                 return BadRequest();
+            }
 
             var productId = await _productRepository.InsertAsync(product);
+            _logger.Log($"Product created with ID: {productId}");
             return CreatedAtAction(nameof(GetProduct), new { id = productId }, product);
         }
         catch (Exception ex)
         {
+            _logger.Log("Error: " + ex);
             return StatusCode(StatusCodes.Status500InternalServerError, "An error occurred while creating the product.");
         }
     }
@@ -70,20 +86,33 @@ public class ProductController : ControllerBase
         try
         {
             if (product == null || product.Id != id)
+            {
+                _logger.Log("Error: Invalid product data or ID mismatch.");
                 return BadRequest();
+            }
 
             var existingProduct = await _productRepository.GetByIdAsync(id);
             if (existingProduct == null)
+            {
+                _logger.Log("Error: Product not found for update.");
                 return NotFound();
+            }
 
             var success = await _productRepository.UpdateAsync(product);
-            if (!success)
+            if (success)
+            {
+                _logger.Log($"Product with ID {id} updated successfully.");
+                return NoContent();
+            }
+            else
+            {
+                _logger.Log("Error: Failed to update the product.");
                 return StatusCode(StatusCodes.Status500InternalServerError, "An error occurred while updating the product.");
-
-            return NoContent();
+            }
         }
         catch (Exception ex)
         {
+            _logger.Log("Error: " + ex);
             return StatusCode(StatusCodes.Status500InternalServerError, "An error occurred while updating the product.");
         }
     }
@@ -96,16 +125,26 @@ public class ProductController : ControllerBase
         {
             var product = await _productRepository.GetByIdAsync(id);
             if (product == null)
+            {
+                _logger.Log("Error: No Product found!");
                 return NotFound();
+            }
 
             var success = await _productRepository.DeleteAsync(id);
-            if (!success)
+            if (success)
+            {
+                _logger.Log($"Product with ID {id} deleted successfully.");
+                return NoContent();
+            }
+            else
+            {
+                _logger.Log("Error: Failed to delete the product.");
                 return StatusCode(StatusCodes.Status500InternalServerError, "An error occurred while deleting the product.");
-
-            return NoContent();
+            }
         }
         catch (Exception ex)
         {
+            _logger.Log("Error: " + ex);
             return StatusCode(StatusCodes.Status500InternalServerError, "An error occurred while deleting the product.");
         }
     }
