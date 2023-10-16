@@ -9,9 +9,9 @@ using System;
 public class ProductController : ControllerBase
 {
     private readonly IProductRepository _productRepository;
-    private readonly Product_api.Logging.ILogger _logger;
+    private readonly IfileLogger _logger;
 
-    public ProductController(IProductRepository productRepository, Product_api.Logging.ILogger statusLogging)
+    public ProductController(IProductRepository productRepository, IfileLogger statusLogging)
     {
         _productRepository = productRepository;
         _logger = statusLogging;

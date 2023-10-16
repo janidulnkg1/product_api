@@ -1,3 +1,4 @@
+using Product_api.Logging;
 using Product_api.Repository;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -8,6 +9,9 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 
 builder.Services.AddTransient<IProductRepository, ProductRepository>();
+
+builder.Services.AddScoped<IfileLogger, fileLogger>();
+
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();

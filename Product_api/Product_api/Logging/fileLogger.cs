@@ -8,11 +8,11 @@ using System.IO;
 namespace Product_api.Logging
 {
 
-    public class Logger: ILogger
+    public class fileLogger: IfileLogger
     {
         private readonly Serilog.ILogger _logger;
 
-        public Logger()
+        public fileLogger()
         {
             var logFolderPath = Path.Combine(Directory.GetCurrentDirectory(), "/logs"); // Specify the folder path
             Directory.CreateDirectory(logFolderPath); // Ensure the folder exists
